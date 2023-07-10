@@ -1,0 +1,350 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="s1.css">
+  <title>Checkout Page</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg headerNav">
+      <div class="container">
+        <a class="navbar-brand" href="#">BitSMart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Category</a>
+            </li>
+          </ul>
+          <form class="d-flex searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+
+          <div class="rightSide">
+            <a href=""><i class="fa fa-shopping-cart "></i></a>
+            <a href=""><i class="fa fa-heart-o "></i></a>
+            <a href=""><i class="fa fa-user "></i></a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <main>
+
+      <div class="checkout-container py-5">
+        <h2>Checkout Page</h2>
+        <p class="lead">Fill the below details to process checkout.</p>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-5 order-md-last ">
+          <div class="container-summary bg-light py-2 px-2">
+
+            <h4 class="mb-3 text-success">Payment</h4>
+
+            <div class="my-3">
+              <h6 class="" id="wallet">BitSMart Wallet</h6>
+              <div class="container-available-balance d-flex">
+                <div><img class="icon px-2 py-2" src="images/Money 3.png"></div>
+                <div><h6 class="text-success px-1 my-3">Wallet Balance: Rs.1000</h6></div>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+            </div>
+
+            <div class="text-success">
+              <h5 class="my-2">Promo code</h5>
+
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Promo code">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+
+            </div>
+            <span class="text-success" id="discount-amount"></span>
+            <h4 class="my-3 text-success">Summary</h4>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h5 class="text mt-2">Subtotal</h5>
+                </div>
+                <span class="text mt-2">Rs.730</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <h5 class="mt-2">Delivery fee</h5>
+                <span class="text mt-2">Rs.30</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-between">
+              <div class="p-2">
+                <h4 class="text-success">Total</h4>
+              </div>
+              <div class="p-2">
+                <h4>Rs.760</h4>
+              </div>
+            </div>
+            <div class="Checkout">
+              <button class=" btn btn-success col-12" style=" margin-bottom: 20px;" type="submit">Continue to
+                checkout</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-8 ">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-success">Order Summary</span>
+            <span class="badge bg-success rounded-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <div class=" p-3 mr-4 text-muted">
+                  <h6 >Name</h6>
+                </div>
+                <div class=" p-3 text-muted">
+                  <h6>Quantity</h6>
+                </div>
+                <div class=" p-3 text-muted">
+                  <h6>Price</h6>
+                </div>
+                <div class=" p-3 text-muted">
+                  <h6>Total</h6>
+                </div>
+                <div class=" p-3 text-muted">
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="p-2">
+                  <img src="images/onion.jpeg" alt="onion">
+                  <small class="mt-2">Onion</small>
+                </div>
+                <div class="p-2 text-muted" id="quantity">x1</div>
+                <div class="p-2 text-muted" id="price_product">Rs.95 </div>
+                <div class="p-2 text-muted" id="total_product">Rs.95</div>
+                <div class="p-2" id="delete_item"></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="p-2">
+                  <img src="images/cashews.jpeg" alt="cashews">
+                  <small class="mt-2">Cashews</small>
+                </div>
+                <div class="p-2 text-muted" id="quantity">x1</div>
+                <div class="p-2 text-muted" id="price_product">Rs.550 </div>
+                <div class="p-2 text-muted" id="total_product">Rs.550</div>
+                <div class="p-2" id="delete_item"></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="p-2">
+                  <img src="images/apple.jpg" alt="apple">
+                  <small class="mt-2">Apple</small>
+                </div>
+                <div class="p-2 text-muted" id="quantity">x3</div>
+                <div class="p-2 text-muted" id="price_product">Rs.25 </div>
+                <div class="p-2 text-muted" id="total_product">Rs.75</div>
+                <div class="p-2" id="delete_item"></div>
+              </div>
+            </li>
+          </ul>
+          <h4 class="mb-3 text-success">Billing address</h4>
+          <form class="needs-validation" novalidate="">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="Mobile Number" class="form-label">Mobile Number</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="mobilenumber" placeholder="10 Digit Mobile Number"
+                    required="">
+                  <div class="invalid-feedback">
+                    Your mobile number is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+              </div>
+
+              <div class="col-md-6">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required="">
+                  <option value="">Choose...</option>
+                  <option>India</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required="">
+                  <option value="">Choose...</option>
+                  <option value=”Andaman and Nicobar Islands”>Andaman and Nicobar Islands</option>
+                  <option value=”Andhra Pradesh”>Andhra Pradesh</option>
+                  <option value=”Arunachal Pradesh”>Arunachal Pradesh</option>
+                  <option value=”Assam”>Assam</option>
+                  <option value=”Bihar”>Bihar</option>
+                  <option value=”Chandigarh”>Chandigarh</option>
+                  <option value=”Chhattisgarh”>Chhattisgarh</option>
+                  <option value=”Dadra and Nagar Haveli”>Dadra and Nagar Haveli</option>
+                  <option value=”Daman and Diu”>Daman and Diu</option>
+                  <option value=”Delhi”>Delhi</option>
+                  <option value=”Goa”>Goa</option>
+                  <option value=”Gujarat”>Gujarat</option>
+                  <option value=”Haryana”>Haryana</option>
+                  <option value=”Himachal Pradesh”>Himachal Pradesh</option>
+                  <option value=”Jammu and Kashmir”>Jammu and Kashmir</option>
+                  <option value=”Jharkhand”>Jharkhand</option>
+                  <option value=”Karnataka”>Karnataka</option>
+                  <option value=”Kerala”>Kerala</option>
+                  <option value=”Lakshadweep”>Lakshadweep</option>
+                  <option value=”Madhya Pradesh”>Madhya Pradesh</option>
+                  <option value=”Maharashtra”>Maharashtra</option>
+                  <option value=”Manipur”>Manipur</option>
+                  <option value=”Meghalaya”>Meghalaya</option>
+                  <option value=”Mizoram”>Mizoram</option>
+                  <option value=”Nagaland”>Nagaland</option>
+                  <option value=”Orissa”>Orissa</option>
+                  <option value=”Pondicherry”>Pondicherry</option>
+                  <option value=”Punjab”>Punjab</option>
+                  <option value=”Rajasthan”>Rajasthan</option>
+                  <option value=”Sikkim”>Sikkim</option>
+                  <option value=”Tamil Nadu”>Tamil Nadu</option>
+                  <option value=”Tripura”>Tripura</option>
+                  <option value=”Uttaranchal”>Uttaranchal</option>
+                  <option value=”Uttar Pradesh”>Uttar Pradesh</option>
+                  <option value=”West Bengal”>West Bengal</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="same-address">
+              <label class="form-check-label" for="same-address">Shipping address is the same as my billing
+                address</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="save-info">
+              <label class="form-check-label mb-4" for="save-info">Save this information for next time</label>
+            </div>
+
+
+          </form>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-heading">
+        <h3>Team Members</h3>
+      </div>
+
+      <div class="team-container">
+        <a href="#" class="team-box">
+          <img src="images/team.jpeg" alt="team">
+          <span>Hritik Chhabra</span>
+        </a>
+
+        <a href="#" class="team-box">
+          <img src="images/team.jpeg" alt="team">
+          <span>Mehul Poddar</span>
+
+          <a href="#" class="team-box">
+            <img src="images/team.jpeg" alt="team">
+            <span>Sidharth Jain</span>
+
+            <a href="#" class="team-box">
+              <img src="images/team.jpeg" alt="team">
+              <span>Swetha Krishna</span>
+            </a>
+
+            <a href="" class="team-box">
+              <img src="images/team.jpeg" alt="team">
+              <span>Vaishnavi Padakanti</span>
+            </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

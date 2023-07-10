@@ -1,0 +1,306 @@
+*{
+    box-sizing:  border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Inter;
+}
+a{
+    text-decoration: none;
+}
+.searchForm{
+    width: 50%;
+
+}
+.rightSide{
+    margin-left: 3rem;
+
+}
+
+.headerNav li.nav-item .nav-link{
+   
+  
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 10px;
+    color: rgb(245, 240, 240);
+
+}
+
+.headerNav a.navbar-brand{
+    
+
+
+    color: rgb(252, 249, 249);
+    font-size: 2.5rem;
+    font-family: Inter;
+    color: rgb(245, 240, 240); 
+
+
+}
+
+.headerNav{
+    padding: 10px 0px;
+    background-color: #2c2b2b;
+    
+
+}
+
+
+footer{
+    background-color: rgb(181, 202, 122);
+    color: black;
+    
+     
+}
+footer li {
+    color: black;
+}
+
+
+.me-2, .btn-success{
+    border-radius: 15px;
+    
+}
+
+.rightSide a{
+    display: inline-block;
+    color: white;
+    margin: 0px 10px;
+    font-size: 1.2rem;
+
+}
+.icon{
+    background: none;
+    border: none;
+}
+.icon i{
+        color: white;
+}
+
+
+.category-heading h2,
+.product-heading h3,
+.footer-heading h3{
+    font-size: 1.56 rem;
+    font-weight: 700;
+    color: #202020;
+    letter-spacing: 0.5px;
+}
+
+.category-heading span,
+.product-heading span{
+    color: #a7a7a7;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+}
+
+
+
+.category-box span,
+.team-box span{
+    color: #393939;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    letter-spacing: 0.3px;
+    
+    font-family: inter;
+     
+}
+.category-box:hover img,
+.team-box:hover img{
+    transform: scale(1.1);
+    transition: all ease 0.1s;
+}
+
+
+
+
+.team-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    border-radius: 10px;
+    min-height: 130px;
+    width: 120px;
+
+}
+body,html{
+    height:100%;
+}
+h2{
+    font-weight: bolder;
+    color: #98bf89;
+}
+
+form{
+    width:550px;
+}
+
+form *{
+    font-weight: bold;
+}
+
+form label{
+    font-size: 18px;
+    color:#8f9096;
+}
+
+form .form-control,form .form-control:focus{
+    border-color:transparent;
+    border-bottom-color: #bebcc1;
+    box-shadow:none;
+}
+
+form .btn{ 
+    border-radius: 0px;
+    border-color: transparent;
+}
+
+.btn.btn-default{
+    background: #ebebeb;
+    color:#8f9096;
+}
+
+.btn.btn-primary{
+    background: #4eb060;
+    color:white;
+}
+.sidebar {
+    height: 100vh !important;
+    bottom: 0;
+    padding-left:20px;
+    font-size: 1.3rem;
+    background: #4eb060;
+}
+
+@media screen and (max-width:940px){
+    .sidebar{
+        font-size: 1rem;
+        padding-left :0px;
+    }
+}
+
+
+.sidebar .nav-link{
+    margin-bottom: 120px;
+    color:#dddce5;
+}
+
+.nav-link.active{
+    color:#fff;
+}
+
+
+.main > .row{
+    height: 100%;
+}
+
+@media screen and (max-width:768px){
+    .content{
+        padding-left:50px; 
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    
+    form{
+        width: 100%;
+        margin:auto;
+    }
+    
+}
+
+.menu {
+    position: absolute;
+    right: 10%;
+    top:30px;
+    margin:auto;
+    display: none;  
+    cursor:pointer;
+    z-index: 5;
+    height: 33px;
+    width:30px;
+}
+
+.bar,.bar:after,.bar:before {
+    width:30px;
+    height:3px;
+    background: #4eb060;
+    transition: all 0.2s;
+}
+
+.bar{
+    position: relative;
+}
+
+.bar:after {
+    position: absolute;
+    content: '';
+    left:0;
+    top:10px;
+    transition: top 0.2s 0.2s,transform 0.2s;
+}
+
+.bar:before {
+    position: absolute;
+    content: '';
+    left:0;
+    bottom:10px;
+    transition: bottom 0.2s 0.2s,transform 0.2s;
+}
+.bar.animate{
+    background: transparent;
+}
+.bar.animate:after{
+    top:0;
+    transform: rotate(45deg);
+    transition: top 0.2s ,transform 0.2s 0.2s;
+    background: #fff;
+}
+
+.bar.animate:before{
+    bottom:0;
+    transform: rotate(-45deg);
+    transition: bottom 0.2s,transform 0.2s  0.2s;
+    background: #fff;
+}
+
+.expand-menu {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background:#4eb060;
+    transition: width 0.5s;
+    width: 0%;
+}
+
+.expand-menu .nav-link{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 20px;
+    color:#dddce5;
+    font-size:1.5rem;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.expand-menu .nav-link.animate{
+    display: block;
+}
+
+.expand-menu .nav-link.animate-show{
+    opacity:1;
+}
+
+.expand-menu .nav-link.active{
+    color:#fff;
+}
+
+.expand-menu.animate{
+    width : 100%;
+}
